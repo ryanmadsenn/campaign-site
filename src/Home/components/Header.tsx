@@ -1,10 +1,5 @@
 import { Flex, Link, Button, Tooltip } from "@chakra-ui/react";
-import {
-  PhoneIcon,
-  EmailIcon,
-  ChatIcon,
-  ExternalLinkIcon,
-} from "@chakra-ui/icons";
+import { PhoneIcon, EmailIcon, ChatIcon } from "@chakra-ui/icons";
 
 const Header = () => {
   return (

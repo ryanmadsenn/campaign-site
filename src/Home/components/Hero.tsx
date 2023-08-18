@@ -2,22 +2,34 @@ import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 const Hero = () => {
   return (
-    <Flex maxW="1000px" m="0 auto" py="50px" gap="50px" alignItems="center">
+    <Flex
+      flexDir={{ base: "column", lg: "row" }}
+      maxW="1000px"
+      m="0 auto"
+      py="50px"
+      px={{ base: "20px", lg: "0" }}
+      gap="50px"
+      alignItems="center"
+    >
       <Image
         src="./images/kent-madsen-headshot.png"
         alt="Kent Madsen"
-        w="500px"
+        w={{ base: "400px", lg: "500px" }}
         borderRadius="50%"
         boxShadow="0 0 5px #000"
       />
       <Box>
-        <Heading display="inline" fontSize="45px" fontWeight="bold">
+        <Heading
+          display="inline"
+          fontSize={{ base: "35px", md: "45px" }}
+          fontWeight="bold"
+        >
           Hi, I'm{" "}
         </Heading>
-        <Box display="inline-block" h="60px">
+        <Box display="inline-block" h="60px" mt={{ base: "-10px" }}>
           <Heading
             display="inline"
-            fontSize="45px"
+            fontSize={{ base: "35px", md: "45px" }}
             fontWeight="bold"
             whiteSpace="nowrap"
             _after={{

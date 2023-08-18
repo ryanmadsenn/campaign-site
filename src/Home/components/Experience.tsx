@@ -1,4 +1,4 @@
-import { Heading, Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import SwiperContent from "./SwiperContent";
@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 const Experience = () => {
   return (
-    <Box py="100px" maxW="1200px" m="0 auto">
+    <Box py={{ base: "50px", lg: "100px" }} maxW="1200px" m="0 auto">
       <Swiper modules={[Navigation]} navigation slidesPerView={1}>
         <SwiperSlide>
           <SwiperContent
