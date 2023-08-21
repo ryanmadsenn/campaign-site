@@ -21,7 +21,7 @@ const Pledges = () => {
       {isMobile ? (
         <Flex flexDir="column" gap="15px">
           <Heading fontSize="22.5px" fontWeight="semibold" textAlign="center">
-            As your public servant I pledge to:
+            As your public servant, I pledge to:
           </Heading>
           <Accordion display="flex" flexDir="column" gap="20px" allowMultiple>
             <PledgeAccordionItem
@@ -60,7 +60,7 @@ const Pledges = () => {
           gap="25px"
         >
           <Heading fontSize="35px" fontWeight="semibold">
-            As your public servant I pledge to:
+            As your public servant, I pledge to:
           </Heading>
           <Grid gap="25px" templateColumns="1fr 1fr 1fr">
             <Flex flexDir="column" gap="20px">

@@ -1,5 +1,10 @@
 import { Flex, Link, Button, Tooltip } from "@chakra-ui/react";
-import { PhoneIcon, EmailIcon, ChatIcon } from "@chakra-ui/icons";
+import {
+  PhoneIcon,
+  EmailIcon,
+  ChatIcon,
+  ExternalLinkIcon,
+} from "@chakra-ui/icons";
 
 const Header = () => {
   return (
@@ -26,11 +31,11 @@ const Header = () => {
             as={Link}
             href="tel:+15093027545"
             variant="outline"
-            outlineColor="white"
+            outline="none"
             rightIcon={<PhoneIcon boxSize="15px" />}
             p="5px"
-            outline="solid 1px white"
-            borderRadius="5px"
+            border="solid 1px white"
+            borderRadius="7.5px"
             textTransform="uppercase"
             fontWeight="semibold"
           >
@@ -52,11 +57,11 @@ const Header = () => {
             as={Link}
             href="sms:+15093027545"
             variant="outline"
-            outlineColor="white"
+            outline="none"
             rightIcon={<ChatIcon boxSize="15px" />}
             p="5px"
-            outline="solid 1px white"
-            borderRadius="5px"
+            border="solid 1px white"
+            borderRadius="7.5px"
             textTransform="uppercase"
             fontWeight="semibold"
           >
@@ -78,20 +83,20 @@ const Header = () => {
             as={Link}
             href="mailto:wkmadsen1@gmail.com"
             variant="outline"
-            outlineColor="white"
+            outline="none"
             rightIcon={<EmailIcon />}
             p="5px"
-            outline="solid 1px white"
-            borderRadius="5px"
+            border="solid 1px white"
+            borderRadius="7.5px"
             textTransform="uppercase"
             fontWeight="semibold"
           >
             Email
           </Button>
         </Tooltip>
-        {/* <Flex alignItems="center" gap="5px">
+        <Flex alignItems="center" gap="5px">
           <Link
-            href="#"
+            href="https://www.paypal.com/donate/?hosted_button_id=SXW6BXJEW65DG"
             alignItems="center"
             textTransform="uppercase"
             fontWeight="semibold"
@@ -100,7 +105,7 @@ const Header = () => {
             Support
           </Link>
           <ExternalLinkIcon />
-        </Flex> */}
+        </Flex>
       </Flex>
     </Flex>
   );

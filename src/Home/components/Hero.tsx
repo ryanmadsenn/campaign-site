@@ -46,7 +46,7 @@ const Hero = () => {
           </Heading>
         </Box>
         <Text fontSize="20px" fontWeight="semibold">
-          For Richland City Council Position 6
+          Running for Richland City Council Pos. 6
         </Text>
       </Box>
     </Flex>
