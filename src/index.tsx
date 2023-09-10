@@ -1,17 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  ChakraProvider,
-  StyleFunctionProps,
-  extendTheme,
-} from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import App from "./App";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { BrowserRouter } from "react-router-dom";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBV3s6-QDYzFagbhKXqfPIQv3tjgO0lcFs",
+  apiKey: "AIzaSyDw89TnoO8CAOwhN8u9392TN5h-I9IWsqA",
   authDomain: "papa-website-47ec1.firebaseapp.com",
   projectId: "papa-website-47ec1",
   storageBucket: "papa-website-47ec1.appspot.com",
