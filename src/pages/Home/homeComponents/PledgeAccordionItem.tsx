@@ -21,6 +21,7 @@ const PledgeAccordionItem = ({ title, pledges }: PledgeAccordionItemProps) => {
       bg="#AF1728"
       p="10px"
       borderRadius="10px"
+      border="none"
       maxW="600px"
       w="100%"
       m="0 auto"
@@ -35,7 +36,7 @@ const PledgeAccordionItem = ({ title, pledges }: PledgeAccordionItemProps) => {
       <AccordionPanel my="10px" textAlign="center">
         <List spacing={5} display="inline-block" textAlign="left" maxW="400px">
           {pledges.map((pledge) => (
-            <ListItem fontSize="15px">
+            <ListItem key={JSON.stringify(pledge)} fontSize="15px">
               <Flex gap="10px">
                 <ListIcon
                   as={CheckCircleIcon}

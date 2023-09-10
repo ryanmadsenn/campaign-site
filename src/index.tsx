@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ChakraProvider, extendBaseTheme } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  StyleFunctionProps,
+  extendTheme,
+} from "@chakra-ui/react";
 import App from "./App";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { BrowserRouter } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBV3s6-QDYzFagbhKXqfPIQv3tjgO0lcFs",
@@ -17,13 +22,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+getAnalytics(app);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const theme = extendBaseTheme({
+const theme = extendTheme({
   styles: {
     global: {
       body: {
@@ -37,12 +42,27 @@ const theme = extendBaseTheme({
     semibold: 600,
     bold: 700,
   },
+  components: {
+    Heading: {
+      baseStyle: {
+        fontFamily: "Raleway, sans-serif",
+      },
+    },
+    Button: {
+      baseStyle: {
+        borderRadius: "7.5px",
+        padding: "7.5px !important",
+      },
+    },
+  },
 });
 
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ChakraProvider>
   </React.StrictMode>
 );
